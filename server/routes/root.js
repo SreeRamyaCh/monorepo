@@ -1,8 +1,12 @@
 //Import the Express Library.
 const express = require("express");
-
 //Create an instance of router.
 const app = express.Router();
+//Import API route.
+const api = require("./api");
+
+//Handle API Route
+app.use("/api", api);
 
 //Create a GET Path.
 app.get("/", (req, res) => {
